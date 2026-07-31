@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html l>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Responsive Image Gallery</h1>
+
+<!-- Filter Buttons -->
+<div class="buttons">
+    <button onclick="filterSelection('all')">All</button>
+    <button onclick="filterSelection('nature')">Nature</button>
+    <button onclick="filterSelection('city')">City</button>
+    <button onclick="filterSelection('animals')">Animals</button>
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+
+<div class="image nature">
+<img src="https://picsum.photos/id/1015/400/300" onclick="openLightbox(0)">
+</div>
+
+<div class="image city">
+<img src="https://picsum.photos/id/1011/400/300" onclick="openLightbox(1)">
+</div>
+
+<div class="image animals">
+<img src="https://picsum.photos/id/1025/400/300" onclick="openLightbox(2)">
+</div>
+
+<div class="image nature">
+<img src="https://picsum.photos/id/1039/400/300" onclick="openLightbox(3)">
+</div>
+
+<div class="image city">
+<img src="https://picsum.photos/id/1043/400/300" onclick="openLightbox(4)">
+</div>
+
+<div class="image animals">
+<img src="https://picsum.photos/id/1074/400/300" onclick="openLightbox(5)">
+</div>
+
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+
+<span class="close" onclick="closeLightbox()">&times;</span>
+
+<button class="prev" onclick="changeImage(-1)">&#10094;</button>
+
+<img id="lightbox-img">
+
+<button class="next" onclick="changeImage(1)">&#10095;</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

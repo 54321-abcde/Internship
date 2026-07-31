@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Music Player</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="player">
+
+        <!-- Album Cover -->
+        <div class="cover">
+            <img id="cover" src="images/default.jpg" alt="Album Cover">
+        </div>
+
+        <!-- Song Details -->
+        <div class="details">
+            <h2 id="title">Song Title</h2>
+            <h4 id="artist">Artist Name</h4>
+        </div>
+
+        <!-- Audio -->
+        <audio id="audio"></audio>
+
+        <!-- Progress -->
+        <div class="progress-area">
+            <span id="current-time">00:00</span>
+
+            <input
+                type="range"
+                id="progress"
+                value="0"
+                min="0"
+                max="100">
+
+            <span id="duration">00:00</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+
+            <button id="prev">
+                <i class="fas fa-backward"></i>
+            </button>
+
+            <button id="play">
+                <i class="fas fa-play"></i>
+            </button>
+
+            <button id="next">
+                <i class="fas fa-forward"></i>
+            </button>
+
+        </div>
+
+        <!-- Volume -->
+        <div class="volume">
+
+            <i class="fas fa-volume-up"></i>
+
+            <input
+                type="range"
+                id="volume"
+                min="0"
+                max="1"
+                step="0.1"
+                value="1">
+
+        </div>
+
+    </div>
+
+    <!-- Playlist -->
+    <div class="playlist">
+
+        <h2>Playlist</h2>
+
+        <!-- Search -->
+        <input
+            type="text"
+            id="search"
+            placeholder="Search song...">
+
+        <!-- Song List -->
+        <ul id="playlist"></ul>
+
+        <!-- Add Song -->
+        <h3>Add New Song</h3>
+
+        <input
+            type="text"
+            id="songTitle"
+            placeholder="Song Title">
+
+        <input
+            type="text"
+            id="songArtist"
+            placeholder="Artist Name">
+
+        <input
+            type="text"
+            id="songFile"
+            placeholder="songs/song.mp3">
+
+        <input
+            type="text"
+            id="coverFile"
+            placeholder="images/cover.jpg">
+
+        <button id="addSong">
+            Add Song
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
